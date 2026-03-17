@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="176.0" prefWidth="178.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="controllers.MasterController">
+   <MenuBar>
+     <menus>
+       <Menu mnemonicParsing="false" text="Utilisateur">
+         <items>
+           <MenuItem fx:id="menuConnexion" mnemonicParsing="false" text="Connexion" />
+               <MenuItem fx:id="menuDeconnexion" mnemonicParsing="false" text="Déconnexion " />
+         </items>
+       </Menu>
+       <Menu mnemonicParsing="false" text="Livres">
+         <items>
+           <MenuItem mnemonicParsing="false" text="Recherche" />
+               <MenuItem mnemonicParsing="false" text="Ajout" />
+         </items>
+       </Menu>
+     </menus>
+      <effect>
+         <Glow />
+      </effect>
+   </MenuBar>
+   <ScrollPane fx:id="contentPane" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+     <content>
+       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+     </content>
+   </ScrollPane>
+</VBox>
