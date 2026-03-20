@@ -1,4 +1,4 @@
-package controllers;
+package com.lmdsio.projetbiblio.controllers;
 
 import com.lmdsio.projetbiblio.BiblioApplication;
 import javafx.fxml.FXML;
@@ -24,5 +24,9 @@ public class MasterController {
             contentNode = null;
         }
         contentPane.setContent(contentNode);
+    }
+    @FXML
+    protected void onMenuConnexion(){
+        showContent("login");
     }
 }

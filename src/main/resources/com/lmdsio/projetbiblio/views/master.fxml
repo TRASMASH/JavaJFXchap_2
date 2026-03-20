@@ -4,12 +4,12 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="TOP_CENTER" prefHeight="176.0" prefWidth="178.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="controllers.MasterController">
+<VBox alignment="TOP_CENTER" prefHeight="176.0" prefWidth="178.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lmdsio.projetbiblio.controllers.MasterController">
    <MenuBar>
      <menus>
        <Menu mnemonicParsing="false" text="Utilisateur">
          <items>
-           <MenuItem fx:id="menuConnexion" mnemonicParsing="false" text="Connexion" />
+           <MenuItem fx:id="MenuConnexion" mnemonicParsing="false" onAction="#onMenuConnexion" text="Connexion" />
                <MenuItem fx:id="menuDeconnexion" mnemonicParsing="false" text="Déconnexion " />
          </items>
        </Menu>
@@ -19,6 +19,11 @@
                <MenuItem mnemonicParsing="false" text="Ajout" />
          </items>
        </Menu>
+         <Menu fx:id="about" mnemonicParsing="false" onAction="#onAbout" text="?">
+           <items>
+             <MenuItem mnemonicParsing="false" text="A propos" />
+           </items>
+         </Menu>
      </menus>
       <effect>
          <Glow />
