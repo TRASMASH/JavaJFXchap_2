@@ -13,6 +13,13 @@ public class MasterController {
     protected void initialize() {
         showContent("welcome");
     }
+    @FXML
+    protected void onMenuConnexion(){
+        showContent("login");
+    }
+    @FXML
+    protected void onApropos(){ showContent("about");
+    }
 
     protected void showContent(String fxmlName) {
         Node contentNode;
@@ -25,8 +32,5 @@ public class MasterController {
         }
         contentPane.setContent(contentNode);
     }
-    @FXML
-    protected void onMenuConnexion(){
-        showContent("login");
-    }
+
 }

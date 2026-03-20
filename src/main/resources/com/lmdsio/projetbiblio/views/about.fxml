@@ -1,44 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="TOP_CENTER" prefHeight="176.0" prefWidth="178.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lmdsio.projetbiblio.controllers.MasterController">
-    <MenuBar>
-        <menus>
-            <Menu mnemonicParsing="false" text="Utilisateur">
-                <items>
-                    <MenuItem fx:id="MenuConnexion" mnemonicParsing="false" onAction="#onMenuConnexion" text="Connexion" />
-                    <MenuItem fx:id="menuDeconnexion" mnemonicParsing="false" text="Déconnexion " />
-                </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Livres">
-                <items>
-                    <MenuItem mnemonicParsing="false" text="Recherche" />
-                    <MenuItem mnemonicParsing="false" text="Ajout" />
-                </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="?">
-                <items>
-                    <MenuItem mnemonicParsing="false" text="A propos" />
-                </items>
-            </Menu>
-        </menus>
-        <effect>
-            <Glow />
-        </effect>
-    </MenuBar>
-   <ImageView fitHeight="98.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
-      <image>
-         <Image url="@../images/open-book_8633297.png" />
-      </image>
-   </ImageView>
-   <ToggleButton mnemonicParsing="false" text="Crédit" />
-    <ScrollPane fx:id="contentPane" fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
-        <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-        </content>
-    </ScrollPane>
+<VBox alignment="TOP_CENTER" prefHeight="233.0" prefWidth="283.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lmdsio.projetbiblio.controllers.AboutController">
+    <Label text="Biblio 1.0" textAlignment="CENTER">
+        <opaqueInsets>
+            <Insets />
+        </opaqueInsets>
+        <VBox.margin>
+            <Insets top="10.0" />
+        </VBox.margin>
+    </Label>
+    <ImageView fitHeight="114.0" fitWidth="110.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/open-book_8633297.png" />
+        </image>
+        <VBox.margin>
+            <Insets bottom="10.0" top="15.0" />
+        </VBox.margin>
+    </ImageView>
+    <ToggleButton fx:id="tggleCredits" mnemonicParsing="false" onAction="#showCredit" text="Crédits">
+        <VBox.margin>
+            <Insets top="5.0" />
+        </VBox.margin></ToggleButton>
+    <Label fx:id="credits" text="Y.loureiro - BTS SIO - La Martiniere Duchère" visible="false">
+        <VBox.margin>
+            <Insets top="5.0" />
+        </VBox.margin></Label>
 </VBox>
